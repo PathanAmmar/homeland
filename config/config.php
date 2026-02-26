@@ -1,22 +1,21 @@
-<?php
-try {
-    // Base URL (IMPORTANT)
-    define("APP_URL", "http://localhost/homeland");
+<?php 
 
-    // Database configuration
-    define("HOSTNAME", "localhost");
-    define("DBNAME", "homeland");
-    define("USER", "root");
-    define("PASS", "");
+    try {
+        //host
+        if(!defined('HOSTNAME')) define("HOSTNAME", "localhost");
 
-    $conn = new PDO(
-        "mysql:host=" . HOSTNAME . ";dbname=" . DBNAME . ";",
-        USER,
-        PASS
-    );
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //DBNAEM
+        if(!defined('DBNAME')) define("DBNAME", "homeland");
 
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
+        //user
+        if(!defined('USER')) define("USER", "root");
 
+        //pass
+        if(!defined('PASS')) define("PASS", "");
+
+        $conn = new PDO("mysql:host=".HOSTNAME.";dbname=".DBNAME.";", USER, PASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    } catch(PDOException $e) {
+        die("Database connection failed: " . $e->getMessage());
+    }  
