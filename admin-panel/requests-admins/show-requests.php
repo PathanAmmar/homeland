@@ -9,11 +9,11 @@
     echo "<script>window.location.href='".ADMINURL."/admins/login-admins.php' </script>";
   }
 
-  $requests = $conn->query("SELECT * FROM requests WHERE author='$_SESSION[adminname]'");
+  $requests = $conn->query("SELECT * FROM requests ORDER BY id DESC");
 
-  $requests->execute();
+$requests->execute();
 
-  $allRequests = $requests->fetchAll(PDO::FETCH_OBJ);
+$allRequests = $requests->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 

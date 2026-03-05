@@ -23,6 +23,7 @@
                   <li><a href="#">Buy</a></li>
                   <li><a href="#">Rent</a></li>
                   <li><a href="#">Properties</a></li>
+                  <li><a href="admin-panel/admins/login-admins.php">Admin Login</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
