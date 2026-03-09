@@ -35,7 +35,26 @@
    
 
     </div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
+    <!-- Identify business -->
+    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+
+    <!-- Payment type -->
+    <input type="hidden" name="cmd" value="_xclick">
+
+    <!-- Product -->
+    <input type="hidden" name="item_name" value="Test Product">
+    <input type="hidden" name="amount" value="10.00">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- Redirect URLs -->
+    <input type="hidden" name="return" value="https://yourwebsite.com/success.php">
+    <input type="hidden" name="cancel_return" value="https://yourwebsite.com/cancel.php">
+
+    <input type="submit" value="Pay Now">
+
+</form>
 
     <div class="site-section site-section-sm pb-0">
       <div class="container">
@@ -60,7 +79,6 @@
                   <select name="offers" id="offer-types" class="form-control d-block rounded-0">
                     <option value="sale">sale</option>
                     <option value="rent">rent</option>
-                    <option value="lease">lease</option>
                   </select>
                 </div>
               </div>
@@ -96,8 +114,7 @@
                   <a href="<?php echo APPURL; ?>" class="view-list px-3 border-right active">All</a>
                   <a href="rent.php?type=rent" class="view-list px-3 border-right">Rent</a>
                   <a href="sale.php?type=sale" class="view-list px-3">Sale</a>
-                  <a href="price.php?price=ASC" class="view-list px-3">Price Ascending</a>
-                  <a href="price.php?price=DESC" class="view-list px-3">Price Descending</a>
+                
                 </div>
 
 
@@ -124,10 +141,45 @@
                 <img src="<?php echo THUMBNAILMURL;?>/<?php echo $prop->image; ?>" alt="Image" class="img-fluid">
               </a>
               <div class="p-4 property-body">
-                <h2 class="property-title"><a href="property-details.php?id=<?php echo $prop->id; ?>"><?php echo $prop->name; ?></a></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <?php echo $prop->location; ?></span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$<?php echo $prop->price; ?></strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
+<h2 class="property-title">
+<a href="property-details.php?id=<?php echo $prop->id; ?>">
+<?php echo $prop->name; ?>
+</a>
+</h2>
+
+<span class="property-location d-block mb-3">
+<span class="property-icon icon-room"></span>
+<?php echo $prop->location; ?>
+</span>
+
+<strong class="property-price text-primary mb-3 d-block text-success">
+$<?php echo $prop->price; ?>
+</strong>
+
+<?php if($prop->status == "available"){ ?>
+<span style="color:green; font-weight:bold;">Available</span>
+
+<?php } elseif($prop->status == "reserved"){ ?>
+<span style="color:orange; font-weight:bold;">Reserved</span>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="item_name" value="<?php echo $prop->name; ?>">
+<input type="hidden" name="amount" value="<?php echo $prop->price; ?>">
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="return" value="http://localhost/homeland/payment/success.php?id=<?php echo $prop->id; ?>">
+<input type="hidden" name="cancel_return" value="http://localhost/homeland/payment/cancel.php">
+
+<input type="submit" value="Pay Now" class="btn btn-success mt-2">
+
+</form>
+
+<?php } elseif($prop->status == "sold"){ ?>
+<span style="color:red; font-weight:bold;">Sold</span>
+<?php } ?>
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number"><?php echo $prop->beds; ?></span>
@@ -163,7 +215,7 @@
             <div class="site-section-title">
               <h2>Why Choose Us?</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+            <p>At Homeland Real Estate, we are committed to helping clients find the perfect property with ease and confidence. Our experienced team provides expert guidance, transparent communication, and reliable market insights to ensure every buying, selling, or renting experience is smooth and successful.</p>
           </div>
         </div>
 
@@ -172,7 +224,9 @@
             <a href="#" class="service text-center">
               <span class="icon flaticon-house"></span>
               <h2 class="service-heading">Research Subburbs</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p>We provide detailed information about neighborhoods, including nearby schools, transportation, safety, and lifestyle amenities. Our platform helps you explore the best areas to live based on your personal needs and preferences.
+
+Read More</p>
               <p><span class="read-more">Read More</span></p>
             </a>
           </div>
@@ -180,7 +234,9 @@
             <a href="#" class="service text-center">
               <span class="icon flaticon-sold"></span>
               <h2 class="service-heading">Sold Houses</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p>Our strong network and market expertise allow us to successfully close property deals quickly and efficiently. We have helped many families find their dream homes and assisted sellers in getting the best value for their properties.
+
+Read More</p>
               <p><span class="read-more">Read More</span></p>
             </a>
           </div>
@@ -188,7 +244,9 @@
             <a href="#" class="service text-center">
               <span class="icon flaticon-camera"></span>
               <h2 class="service-heading">Security Priority</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p>Your safety and privacy are our top priorities. We ensure secure transactions, verified listings, and professional support to give you peace of mind throughout your property journey.
+
+Read More</p>
               <p><span class="read-more">Read More</span></p>
             </a>
           </div>
@@ -244,7 +302,7 @@
         <div class="col-md-7">
           <div class="site-section-title text-center">
             <h2>Our Agents</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
+            <p>Our team of experienced real estate professionals is dedicated to helping you find the perfect property. With deep knowledge of the market and a commitment to excellent customer service, our agents guide clients through every step of buying, selling, or renting a home.</p>
           </div>
         </div>
       </div>
@@ -258,7 +316,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</p>
+                <p>Megan Smith is a dedicated real estate professional with years of experience in helping clients find homes that match their lifestyle and budget. She believes in building long-term relationships and delivering exceptional service to every client.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -278,7 +336,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p>
+                <p>Brooke specializes in residential properties and works closely with buyers and sellers to ensure smooth and successful transactions. Her strong communication skills and deep knowledge of the market make her a trusted advisor.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -298,7 +356,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis modi repellat nobis, praesentium perspiciatis, explicabo. Atque cupiditate, voluptates pariatur odit officia libero veniam quo.</p>
+                <p>Philip Martin is known for his professionalism and commitment to client satisfaction. With a strong understanding of the property market, he helps clients make informed decisions and achieve their real estate goals.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>

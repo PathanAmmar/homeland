@@ -22,8 +22,8 @@
             <div class="site-section-title">
               <h2>Our Company</h2>
             </div>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in cum odio./p>
-            <p>Illum repudiandae ratione facere explicabo. Consequatur dolor optio iusto, quos autem voluptate ea? Sunt laudantium fugiat, mollitia voluptate? Modi blanditiis veniam nesciunt architecto odit voluptatum tempore impedit magnam itaque natus!</p>
+            <p class="lead">At Homeland Real Estate, we are passionate about helping people discover the right property for their needs.</p>
+            <p>With a strong focus on customer satisfaction, we provide professional guidance, reliable information, and a seamless property search experience. Our mission is to simplify the real estate journey and help our clients make confident decisions.</p>
             <p><a href="#" class="btn btn-outline-primary rounded-0 py-2 px-5">Read More</a></p>
           </div>
         </div>
@@ -36,7 +36,9 @@
         <div class="col-md-7">
           <div class="site-section-title text-center">
             <h2>Leadership</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
+            <p>Our leadership team is committed to driving innovation and excellence in the real estate industry. With years of experience and deep market knowledge, they guide our company with a clear vision and strong values focused on trust, transparency, and customer satisfaction.
+
+Through strategic planning and dedication to quality service, our leaders ensure that every client receives professional support and reliable solutions when buying, selling, or renting properties.</p>
           </div>
         </div>
       </div>
@@ -50,7 +52,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</p>
+                <p>Megan Smith is a dedicated real estate professional with years of experience in helping clients find homes that match their lifestyle and budget. She believes in building long-term relationships and delivering exceptional service to every client.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -70,7 +72,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p>
+                <p>Brooke Cagle is a skilled real estate agent with a proven track record of helping clients navigate the buying and selling process with confidence. Her expertise in market analysis and negotiation ensures that every client gets the best possible outcome.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -90,7 +92,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis modi repellat nobis, praesentium perspiciatis, explicabo. Atque cupiditate, voluptates pariatur odit officia libero veniam quo.</p>
+                <p>Philip Martin is a seasoned real estate professional with a deep understanding of the market. His commitment to integrity and client satisfaction has made him a trusted advisor for many clients throughout his career.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -114,7 +116,7 @@
           <div class="col-md-7">
             <div class="site-section-title text-center">
               <h2>Our Agents</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
+              <p>Meet the professionals who are dedicated to helping you find your perfect property.</p>
             </div>
           </div>
         </div>
@@ -129,7 +131,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Steven Ericson</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed qui at harum ipsum earum voluptas a unde error sapiente, sint perspiciatis, fugiat neque iure rerum repellendus tempora odio doloribus.</p>
+                <p>Steven Ericson is a passionate real estate professional dedicated to providing exceptional service to her clients. With a strong background in the industry, she brings a wealth of knowledge and experience to every transaction.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -149,7 +151,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Nathan Dumlao</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nobis commodi rerum dicta, nulla. Delectus neque hic deserunt consequuntur esse facere, necessitatibus corrupti! Blanditiis ratione consequuntur beatae adipisci, voluptatum consequatur.</p>
+                <p>Nathan Dumlao is a knowledgeable real estate professional with a focus on providing personalized service to each client. His expertise in market analysis and his commitment to transparency make him a valuable asset in any real estate transaction.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -169,7 +171,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam tenetur molestiae maiores officiis consectetur, distinctio aperiam in illum praesentium corrupti, harum porro reiciendis magnam non enim dolorem aut explicabo.</p>
+                <p>Brooke Cagle is a skilled real estate agent with a proven track record of helping clients navigate the buying and selling process with confidence. Her expertise in market analysis and negotiation ensures that every client gets the best possible outcome.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -192,7 +194,7 @@
             <div class="site-section-title">
               <h2>Frequently Ask Questions</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+            <p>Below are some of the most common questions clients ask when buying, selling, or renting a property. Our goal is to make the real estate process simple, transparent, and convenient for everyone.</p>
           </div>
         </div>
 
@@ -205,18 +207,18 @@
               </h3>
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae cumque perspiciatis aperiam accusantium facilis provident aspernatur nisi optio debitis dolorum, est eum eligendi vero aut ad necessitatibus nulla sit labore doloremque magnam! Ex molestiae, dolor tempora, ad fuga minima enim mollitia consequuntur, necessitatibus praesentium eligendi officia recusandae culpa tempore eaque quasi ullam magnam modi quidem in amet. Quod debitis error placeat, tempore quasi aliquid eaque vel facilis culpa voluptate.</p>
+                  <p>Our company is Homeland Real Estate, a modern real estate platform that helps clients find, buy, sell, and rent properties easily. We provide verified listings and professional support to ensure a smooth property search experience.</p>
                 </div>
               </div>
             </div> <!-- .accordion-item -->
             
             <div class="accordion-item">
               <h3 class="mb-0 heading">
-                <a class="btn-block" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">How much pay for 3  months?<span class="icon"></span></a>
+                <a class="btn-block" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">How much do your services cost?<span class="icon"></span></a>
               </h3>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
+                  <p>The cost of our services depends on the type of property and the services required. We always provide clear and transparent pricing so our clients understand all fees before starting any transaction.</p>
                 </div>
               </div>
             </div> <!-- .accordion-item -->
@@ -227,7 +229,7 @@
               </h3>
               <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
+                  <p>No, you can browse and search for properties without registering. However, creating an account allows you to save listings, contact agents, and receive updates about new properties.</p>
                 </div>
               </div>
             </div> <!-- .accordion-item -->
@@ -238,7 +240,7 @@
               </h3>
               <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
+                  <p>If you need assistance, you can contact our support team through the Contact Us page. Our team is always ready to help with any questions about listings, property details, or the buying and renting process.</p>
                 </div>
               </div>
             </div> <!-- .accordion-item -->

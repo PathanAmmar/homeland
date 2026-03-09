@@ -44,17 +44,17 @@
       $home_type = $_POST['home_type'];
       $year_built = $_POST['year_built'];
       $type = $_POST['type'];
-      $description = $_POST['description'];
-      $price_sqft = $_POST['price_sqft'];
-      $adminname = $_SESSION['adminname'];
-      $image = $_FILES['thumbnail']['name'];
-
-      $dir = "thumbnails/" . basename($image);
+     $description = $_POST['description'];
+$price_sqft = $_POST['price_sqft'];
+$status = $_POST['status'];   // ADD THIS
+$adminname = $_SESSION['adminname'];
+$image = $_FILES['thumbnail']['name'];
+      $dir = "../../images/" . basename($image);
 
       $insert = $conn->prepare("INSERT INTO props(name, location, price, beds, baths,
-      sq_ft, home_type, year_built, type, description, price_sqft, admin_name, image) 
+      sq_ft, home_type, year_built, type, description, price_sqft,status, admin_name, image) 
       VALUES (:name, :location, :price, :beds, :baths, :sq_ft, :home_type, 
-      :year_built, :type, :description, :price_sqft, :adminname, :image)");
+      :year_built, :type, :description, :price_sqft, :status, :adminname, :image)");
 
       $insert->execute([
         ':name' => $name,
@@ -68,8 +68,9 @@
         ':type' => $type,
         ':description' => $description,
         ':price_sqft' => $price_sqft,
-        ':adminname' => $adminname,
-        ':image' => $image,
+':status' => $status,
+':adminname' => $adminname,
+':image' => $image,
         
       ]);
 
@@ -149,10 +150,21 @@
                            
                         </select>   
                         <select name="type" class="form-control mt-3 mb-4 form-select" aria-label="Default select example">
+                          
                             <option selected>Select Type</option>
                             <option value="Rent">Rent</option>
                             <option value="Rent">Sale</option>
                         </select>  
+                        <div class="form-outline mb-4 mt-4">
+<label>Property Status</label>
+
+<select name="status" class="form-control form-select">
+<option value="available">Available</option>
+<option value="reserved">Reserved</option>
+<option value="sold">Sold</option>
+</select>
+
+</div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Description</label>
                             <textarea placeholder="Description" name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>

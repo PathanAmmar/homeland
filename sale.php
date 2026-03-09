@@ -72,7 +72,7 @@
                   <select name="offers" id="offer-types" class="form-control d-block rounded-0">
                     <option value="sale">sale</option>
                     <option value="rent">rent</option>
-                    <option value="lease">lease</option>
+                    
                   </select>
                 </div>
               </div>
@@ -108,8 +108,7 @@
                   <a href="<?php echo APPURL; ?>" class="view-list px-3 border-right active">All</a>
                   <a href="rent.php?type=rent" class="view-list px-3 border-right">Rent</a>
                   <a href="sale.php?type=sale" class="view-list px-3">Sale</a>
-                  <a href="price.php?price=ASC" class="view-list px-3">Price Ascending</a>
-                  <a href="price.php?price=DESC" class="view-list px-3">Price Descending</a>
+               
                 </div>
 
 

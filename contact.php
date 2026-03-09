@@ -70,7 +70,7 @@
               <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+              <p class="mb-0"><a href="#">ammar@domain.com</a></p>
 
             </div>
             
@@ -85,7 +85,9 @@
         <div class="col-md-7">
           <div class="site-section-title text-center">
             <h2>Our Agents</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
+            <p>At Homeland Real Estate, we are passionate about helping people discover the right property for their needs.
+
+With a strong focus on customer satisfaction, we provide professional guidance, reliable information, and a seamless property search experience. Our mission is to simplify the real estate journey and help our clients make confident decisions.</p>
           </div>
         </div>
       </div>
@@ -99,7 +101,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</p>
+                <p>Megan Smith is a dedicated real estate professional with years of experience in helping clients find homes that match their lifestyle and budget. She believes in building long-term relationships and delivering exceptional service to every client.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -119,7 +121,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p>
+                <p>Brooke Cagle is a highly skilled real estate professional with a proven track record of helping clients achieve their property goals. Her expertise in market analysis and negotiation ensures that every client receives the best possible outcome.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
@@ -139,7 +141,7 @@
 
                 <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
                 <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis modi repellat nobis, praesentium perspiciatis, explicabo. Atque cupiditate, voluptates pariatur odit officia libero veniam quo.</p>
+                <p>Philip Martin is a seasoned real estate professional with a deep understanding of the market and a commitment to exceeding client expectations. His strategic approach and attention to detail make him a trusted partner for buyers and sellers alike.</p>
                 <p>
                   <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>

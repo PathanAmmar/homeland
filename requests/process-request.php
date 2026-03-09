@@ -21,15 +21,21 @@
             $insert = $conn->prepare("INSERT INTO requests (name, email, phone, prop_id, user_id, author) VALUES
             (:name, :email, :phone, :prop_id, :user_id, :author)");
     
-            $insert->execute([
-                ':name' => $name,
-                ':email' => $email,
-                ':phone' => $phone,
-                ':prop_id' => $prop_id,
-                ':user_id' => $user_id,
-                ':author' => $author,
-                
-            ]);
+           $insert->execute([
+    ':name' => $name,
+    ':email' => $email,
+    ':phone' => $phone,
+    ':prop_id' => $prop_id,
+    ':user_id' => $user_id,
+    ':author' => $author,
+]);
+
+// update property status to reserved
+$update = $conn->prepare("UPDATE props SET status='reserved' WHERE id=:id");
+
+$update->execute([
+    ':id' => $prop_id
+]);
         
             echo "<script>alert('request sent successfully');</script>";
         

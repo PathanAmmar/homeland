@@ -143,6 +143,9 @@
             <div class="bg-white widget border rounded">
 
               <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
+              <?php if($allDetails->status == "sold"){ ?>
+<p style="color:red; font-weight:bold;">This property is already sold.</p>
+<?php } else { ?> <?php } ?>
               <?php if(isset($_SESSION['user_id'])) : ?>
                     <?php if($check_request->rowCount() > 0) : ?>
 
@@ -249,7 +252,17 @@
               <div class="p-4 property-body">
                 <h2 class="property-title"><a href="property-details.php?id=<?php echo $allRelatedProp->id; ?>"><?php echo $allRelatedProp->name; ?></a></h2>
                 <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <?php echo $allRelatedProp->location; ?></span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$<?php echo $allRelatedProp->price; ?></strong>
+                <strong class="text-success h1 mb-3">$<?php echo $allDetails->price; ?></strong>
+
+<?php if($allDetails->status == "available"){ ?>
+<span style="color:green; font-weight:bold;">Available</span>
+
+<?php } elseif($allDetails->status == "reserved"){ ?>
+<span style="color:orange; font-weight:bold;">Reserved</span>
+
+<?php } elseif($allDetails->status == "sold"){ ?>
+<span style="color:red; font-weight:bold;">Sold</span>
+<?php } ?>
                 <ul class="property-specs-wrap mb-3 mb-lg-0">
                   <li>
                     <span class="property-specs">Beds</span>

@@ -1,15 +1,26 @@
-<?php require "../layouts/header.php"; ?>  
-<?php require "../../config/config.php"; ?> 
+```php
+<?php require "../layouts/header.php"; ?>
+<?php require "../../config/config.php"; ?>
 
+<?php
 
-<?php 
+if(!isset($_SESSION['adminname'])) {
+    echo "<script>window.location.href='".ADMINURL."/admins/login-admins.php'</script>";
+}
 
+/* APPROVE REQUEST */
+if(isset($_GET['approve'])){
 
-  if(!isset($_SESSION['adminname'])) {
-    echo "<script>window.location.href='".ADMINURL."/admins/login-admins.php' </script>";
-  }
+    $id = $_GET['approve'];
 
-  $requests = $conn->query("SELECT * FROM requests ORDER BY id DESC");
+    $update = $conn->prepare("UPDATE requests SET status='approved' WHERE id=?");
+    $update->execute([$id]);
+
+    echo "<script>window.location.href='show-requests.php'</script>";
+}
+
+/* GET ALL REQUESTS */
+$requests = $conn->query("SELECT * FROM requests ORDER BY id DESC");
 
 $requests->execute();
 
@@ -17,48 +28,85 @@ $allRequests = $requests->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title mb-4 d-inline">Requests</h5>
-            
-              <table class="table mt-3">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">email</th>
-                    <th scope="col">phone</th>
-                    <th scope="col">go to this property</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php if(count($allRequests) > 0) : ?>
-                    <?php foreach($allRequests as $request) : ?>
-                      <tr>
-                        <th scope="row"><?php echo $request->id; ?></th>
-                        <td><?php echo $request->name; ?></td>
-                        <td><?php echo $request->email; ?></td>
-                        <td><?php echo $request->phone; ?></td>
-                        <td><a href="http://localhost/homeland/property-details.php?id=<?php echo $request->prop_id; ?>" class="btn btn-success  text-center ">go</a></td>
-                      </tr>
-                    <?php endforeach; ?>
 
-                  <?php else : ?>
+<div class="row">
+<div class="col">
+<div class="card">
+<div class="card-body">
 
-                    <div class="alert alert-success bg-success text-white">you don't have any requests just yet</div>
+<h5 class="card-title mb-4 d-inline">Requests</h5>
 
-                  <?php endif; ?>
+<table class="table mt-3">
 
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Property</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
 
-                </tbody>
-              </table> 
-            </div>
-          </div>
-        </div>
-      </div>
+<tbody>
 
+<?php if(count($allRequests) > 0) : ?>
 
+<?php foreach($allRequests as $request) : ?>
 
-<?php require "../layouts/footer.php"; ?>  
+<tr>
+
+<td><?php echo $request->id; ?></td>
+<td><?php echo $request->name; ?></td>
+<td><?php echo $request->email; ?></td>
+<td><?php echo $request->phone; ?></td>
+
+<td>
+<a href="http://localhost/homeland/property-details.php?id=<?php echo $request->prop_id; ?>" 
+class="btn btn-success">View</a>
+</td>
+
+<td><?php echo $request->status; ?></td>
+
+<td>
+
+<?php if($request->status == "pending") : ?>
+
+<a href="show-requests.php?approve=<?php echo $request->id; ?>" 
+class="btn btn-primary">Approve</a>
+
+<?php else : ?>
+
+<span class="badge bg-success">Approved</span>
+
+<?php endif; ?>
+
+</td>
+
+</tr>
+
+<?php endforeach; ?>
+
+<?php else : ?>
+
+<tr>
+<td colspan="7">
+<div class="alert alert-success">you don't have any requests just yet</div>
+</td>
+</tr>
+
+<?php endif; ?>
+
+</tbody>
+
+</table> 
+
+</div>
+</div>
+</div>
+</div>
+
+<?php require "../layouts/footer.php"; ?>
+```

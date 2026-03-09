@@ -71,17 +71,9 @@
                   <li class="active">
                     <a href="<?php echo APPURL; ?>">Home</a>
                   </li>
-                  <li><a href="<?php echo APPURL; ?>/sale.php?type=sale">Buy</a></li>
+                  <li><a href="<?php echo APPURL; ?>/sale.php?type=sale">Sale</a></li>
                   <li><a href="<?php echo APPURL; ?>/rent.php?type=rent">Rent</a></li>
-                  <li class="has-children">
-                    <a href="#">Properties</a>
-                    <ul class="dropdown arrow-top">
-                      <?php foreach($allCategories as $category) : ?>
-                        <li><a href="<?php echo APPURL; ?>/categories/category.php?name=<?php echo $category->name; ?>"><?php echo str_replace('-', ' ', $category->name); ?></a></li>
-                     
-                      <?php endforeach; ?>
-                    </ul>
-                  </li>
+                  
 
                   <li><a href="<?php echo APPURL; ?>/about.php">About</a></li>
                   <li><a href="<?php echo APPURL; ?>/contact.php">Contact</a></li>
