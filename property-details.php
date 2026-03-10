@@ -143,9 +143,17 @@
             <div class="bg-white widget border rounded">
 
               <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-              <?php if($allDetails->status == "sold"){ ?>
-<p style="color:red; font-weight:bold;">This property is already sold.</p>
-<?php } else { ?> <?php } ?>
+  <?php if($allDetails->status == "sold"){ ?>
+
+<p style="color:red;font-weight:bold;">This property is already sold</p>
+
+<?php } elseif($allDetails->status == "reserved"){ ?>
+
+<a href="payment/payment.php?id=<?php echo $allDetails->id; ?>" class="btn btn-success mb-3">
+Pay Now
+</a>
+
+<?php } ?>
               <?php if(isset($_SESSION['user_id'])) : ?>
                     <?php if($check_request->rowCount() > 0) : ?>
 
