@@ -1,28 +1,29 @@
 <?php
-require "config/config.php";
-session_start();
+require "../config/config.php";
 
-if(isset($_POST['pay'])){
+if(isset($_POST['id']) && isset($_POST['method'])){
 
-$prop_id = $_POST['prop_id'];
-$amount = $_POST['amount'];
-$user_id = $_SESSION['user_id'];
+    $id = $_POST['id'];
+    $method = $_POST['method'];
 
-$insert = $conn->prepare("INSERT INTO payments(prop_id,user_id,amount,payment_status)
-VALUES(:prop_id,:user_id,:amount,'completed')");
+    // check property
+    $check = $conn->prepare("SELECT * FROM props WHERE id=:id");
+    $check->execute([':id'=>$id]);
+    $prop = $check->fetch(PDO::FETCH_OBJ);
 
-$insert->execute([
-':prop_id'=>$prop_id,
-':user_id'=>$user_id,
-':amount'=>$amount
-]);
+    if(!$prop){
+        echo "Property not found";
+        exit;
+    }
 
-$update = $conn->prepare("UPDATE props SET status='sold' WHERE id=:id");
+    // update property status
+    $update = $conn->prepare("UPDATE props SET status='sold' WHERE id=:id");
+    $update->execute([':id'=>$id]);
 
-$update->execute([
-':id'=>$prop_id
-]);
+    // redirect to success page
+    header("Location: success.php?id=".$id."&method=".$method);
+    exit;
 
-header("location: success.php");
-
+}else{
+    echo "Invalid payment request";
 }

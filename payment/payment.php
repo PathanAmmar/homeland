@@ -20,24 +20,100 @@ if(!$prop){
 }
 ?>
 
-<h1>Buy Product</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secure Property Payment</title>
 
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+}
 
-<input type="hidden" name="business" value="sb-b4a1i49461365@business.example.com">
+.payment-box{
+    width:500px;
+    margin:80px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
 
-<input type="hidden" name="cmd" value="_xclick">
+h2{
+    text-align:center;
+}
 
-<input type="hidden" name="item_name" value="<?php echo $prop->name; ?>">
+.property-info{
+    background:#f0f0f0;
+    padding:10px;
+    margin-bottom:20px;
+}
 
-<input type="hidden" name="amount" value="<?php echo str_replace(',', '', $prop->price); ?>">
+.pay-option{
+    margin:10px 0;
+}
 
-<input type="hidden" name="currency_code" value="USD">
+button{
+    width:100%;
+    padding:12px;
+    background:#28a745;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
 
-<input type="hidden" name="return" value="http://localhost/homeland/payment/success.php?id=<?php echo $prop->id; ?>">
+button:hover{
+    background:#218838;
+}
+</style>
 
-<input type="hidden" name="cancel_return" value="http://localhost/homeland/payment/cancel.php">
+</head>
 
-<input type="submit" value="Pay with PayPal">
+<body>
+
+<div class="payment-box">
+
+<h2>Secure Property Payment</h2>
+
+<div class="property-info">
+<strong>Property:</strong> <?php echo $prop->name; ?><br>
+<strong>Price:</strong> $<?php echo $prop->price; ?>
+</div>
+<form action="process-payment.php" method="POST">
+    
+<input type="hidden" name="id" value="<?php echo $prop->id; ?>">
+
+<h3>Select Payment Method</h3>
+
+<div class="pay-option">
+<input type="radio" name="method" value="credit" required> Credit Card
+</div>
+
+<div class="pay-option">
+<input type="radio" name="method" value="upi"> UPI Payment
+</div>
+
+<div class="pay-option">
+<input type="radio" name="method" value="bank"> Bank Transfer
+</div>
+
+<div class="pay-option">
+<input type="radio" name="method" value="crypto"> Crypto Wallet
+</div>
+
+<div class="pay-option">
+<input type="radio" name="method" value="cash"> Cash Payment
+</div>
+
+<br>
+
+<button type="submit">Complete Payment</button>
 
 </form>
+
+</div>
+
+</body>
+</html>

@@ -13,12 +13,12 @@
 
 ?>
   
- 
+
 
     <div class="slide-one-item home-slider owl-carousel">
      <?php foreach($props as $prop) : ?>
 
-        <div class="site-blocks-cover overlay" style="background-image: url(<?php echo THUMBNAILMURL; ?>/<?php echo $prop->image; ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="site-blocks-cover overlay" style="background-image: url('<?php echo THUMBNAILMURL; ?>/<?php echo $prop->image; ?>');" data-aos="fade" data-stellar-background-ratio="0.5">
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-md-10">
@@ -35,26 +35,7 @@
    
 
     </div>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
-    <!-- Identify business -->
-    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
-
-    <!-- Payment type -->
-    <input type="hidden" name="cmd" value="_xclick">
-
-    <!-- Product -->
-    <input type="hidden" name="item_name" value="Test Product">
-    <input type="hidden" name="amount" value="10.00">
-    <input type="hidden" name="currency_code" value="USD">
-
-    <!-- Redirect URLs -->
-    <input type="hidden" name="return" value="https://yourwebsite.com/success.php">
-    <input type="hidden" name="cancel_return" value="https://yourwebsite.com/cancel.php">
-
-    <input type="submit" value="Pay Now">
-
-</form>
 
     <div class="site-section site-section-sm pb-0">
       <div class="container">
@@ -138,8 +119,9 @@
                 <div class="offer-type-wrap">
                   <span class="offer-type bg-<?php if($prop->type == "rent") { echo "success"; } else { echo "danger"; }?>"><?php echo $prop->type; ?></span>
                 </div>
-                <img src="<?php echo THUMBNAILMURL;?>/<?php echo $prop->image; ?>" alt="Image" class="img-fluid">
+               <img src="<?php echo THUMBNAILMURL; ?>/<?php echo $prop->image; ?>" alt="Image" class="img-fluid">
               </a>
+
               <div class="p-4 property-body">
 <h2 class="property-title">
 <a href="property-details.php?id=<?php echo $prop->id; ?>">
@@ -162,20 +144,9 @@ $<?php echo $prop->price; ?>
 <?php } elseif($prop->status == "reserved"){ ?>
 <span style="color:orange; font-weight:bold;">Reserved</span>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-
-<input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="item_name" value="<?php echo $prop->name; ?>">
-<input type="hidden" name="amount" value="<?php echo $prop->price; ?>">
-<input type="hidden" name="currency_code" value="USD">
-
-<input type="hidden" name="return" value="http://localhost/homeland/payment/success.php?id=<?php echo $prop->id; ?>">
-<input type="hidden" name="cancel_return" value="http://localhost/homeland/payment/cancel.php">
-
-<input type="submit" value="Pay Now" class="btn btn-success mt-2">
-
-</form>
+<a href="payment/payment.php?id=<?php echo $prop->id; ?>" class="btn btn-success">
+Pay Now
+</a>
 
 <?php } elseif($prop->status == "sold"){ ?>
 <span style="color:red; font-weight:bold;">Sold</span>
